@@ -52,6 +52,13 @@ public class FileUtil {
         }
     }
     
+    public static BufferedWriter appendContents(BufferedWriter writer, List<String> contents) throws IOException {
+        for (String content : contents) {
+            writer.append(content).append(LINE_TEMINAL);
+        }
+        return writer;
+    }
+    
     public static String getTxtFileNameWithTimestamp(String fileHead) {
         return fileHead + 
                 new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Timestamp(System.currentTimeMillis())) + 
