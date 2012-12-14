@@ -1,4 +1,4 @@
-package vivi.utils.file;
+package utils.chars;
 
 import java.nio.charset.Charset;
 

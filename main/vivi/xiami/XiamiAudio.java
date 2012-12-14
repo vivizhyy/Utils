@@ -17,6 +17,7 @@ import org.jaudiotagger.tag.Tag;
 import org.jaudiotagger.tag.TagException;
 import org.jaudiotagger.tag.TagField;
 
+import utils.chars.StringUtil;
 import vivi.net.WebClient;
 
 public class XiamiAudio {
@@ -96,12 +97,12 @@ public class XiamiAudio {
     }
     
     public void extactFieldsInfo() throws Exception {
-        String webContent = WebClient.GetWebContent(audioUrl);
-        if (webContent != null) {
+        String webContent = new WebClient().getContent(audioUrl);
+        if (!StringUtil.isBlank(webContent)) {
             parseInfoFromAudioUrl(webContent);
             return;
         }
-        System.out.println(audioUrl + "\tis null");
+        System.err.println(audioUrl + "\tis null");
     }
     
     private void parseInfoFromAudioUrl(String webContent) {

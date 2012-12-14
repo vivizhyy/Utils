@@ -1,186 +1,148 @@
 package vivi.net;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownServiceException;
+import java.nio.charset.Charset;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.IOUtils;
+
+import com.wumii.model.service.CharsetDetector;
+
+import utils.chars.StringUtil;
 
 
 public class WebClient {
+    private static final CharsetDetector CHARSET_DETECTOR = new CharsetDetector();
+    private static final Charset DEFAULT_CHARSET = Charset.forName("GBK");
+    
+    class Proxy {
+        private String proxyHost;
+        private String proxyPort;
+        private String proxyUser;
+        private String proxyPassword;
+        
+        
+        public Proxy(String proxyHost, String proxyPort) {
+            this(proxyHost, proxyPort, null, null);
+        }
+        
+        public Proxy(String sproxyHost, String sproxyPort,
+                String sproxyUser, String sproxyPassword) {
+            this.proxyHost = sproxyHost;
+            this.proxyPort = sproxyPort;
+            if (sproxyPassword != null && sproxyPassword.length() > 0) {
+                this.proxyUser = sproxyUser;
+                this.proxyPassword = sproxyPassword;
+            }
+        }
+        
+        public Properties getProxy() {
+            Properties propRet = null;
+            if (proxyHost != null && proxyHost.length() > 0) {
+                setProxy(propRet);
+            }
 
-    /**
-     * 代理服务器的地址
-     */
-    private static String proxyHost;
-    /**
-     * 代理服务器的端口
-     */
-    private static String proxyPort;
-    /**
-     * 代理服务器用户名
-     */
-    private static String proxyUser;
-    /**
-     * 代理服务器密码
-     */
-    private static String proxyPassword;
-
-    /**
-     * 网页抓取方法
-     * 
-     * @param urlString
-     *            要抓取的url地址
-     * @param charset
-     *            网页编码方式
-     * @param timeout
-     *            超时时间
-     * @return 抓取的网页内容
-     * @throws IOException
-     *             抓取异常
-     */
-    public static String getWebContent(String urlString, final String charset,
-            int timeout) throws IOException {
-        if (urlString == null || urlString.length() == 0) {
+            return propRet;
+        }
+        
+        private void setProxy(Properties propRet) {
+            setHostAndPort(propRet);
+            if (proxyUser != null && proxyUser.length() > 0) {
+                setUsernameAndPsw(propRet);
+            }
+        }
+        
+        private void setHostAndPort(Properties propRet) {
+            propRet = System.getProperties();
+            propRet.setProperty("http.proxyHost", proxyHost);
+            propRet.setProperty("http.proxyPort", proxyPort);
+        }
+        
+        private void setUsernameAndPsw(Properties propRet) {
+            propRet.setProperty("http.proxyUser", proxyUser);
+            propRet.setProperty("http.proxyPassword", proxyPassword);
+        }
+    }
+    
+    private URL getUrl(String urlString) throws MalformedURLException {
+        if (StringUtil.isBlank(urlString)) {
             return null;
         }
         urlString = (urlString.startsWith("http://") || urlString
                 .startsWith("https://")) ? urlString : ("http://" + urlString)
                 .intern();
-        URL url = new URL(urlString);
-
+        return new URL(urlString);
+    }
+    
+    private HttpURLConnection getHttpURLConnection(URL url) throws IOException {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        getProxy();
+        setHttpURLConnectionProperties(conn);
+        return conn;
+    }
+    
+    private void setHttpURLConnectionProperties(HttpURLConnection conn) {
         conn.setRequestProperty(
                 "User-Agent",
-                "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");// 增加报头，模拟浏览器，防止屏蔽
-        conn.setRequestProperty("Accept", "text/html");// 只接受text/html类型，当然也可以接受图片,pdf,*/*任意，就是tomcat/conf/web里面定义那些
+                "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");
+        conn.setRequestProperty("Accept", "text/html");
 
-        conn.setConnectTimeout(timeout);
+        conn.setConnectTimeout((int) TimeUnit.MINUTES.toMillis(1));
+    }
+    
+    private HttpURLConnection getConnectionWithCheck(String urlString) throws IOException {
+        HttpURLConnection conn = getHttpURLConnection(getUrl(urlString));
+        if (!(conn.getResponseCode() > 199 && conn.getResponseCode() < 300)) {
+            conn = null;
+        }
+        return conn;
+    }
+    
+    private String getContentFromConnection(HttpURLConnection conn) throws IOException, UnknownServiceException {
+        
+        InputStream inputstream = conn.getInputStream();
+        byte[] contentBytes = IOUtils.toByteArray(inputstream);
+        String contentTypeString = conn.getContentType();
+        Charset charset = detectCharset(contentTypeString, contentBytes);
+        return new String(contentBytes, charset);
+    }
+    
+    private Charset detectCharset(String contentType, byte[] contentBytes) throws IOException {
+        Charset charset = CHARSET_DETECTOR.detect(contentType, contentBytes);
+        if (charset != null) {
+            return charset;
+        }
+        return DEFAULT_CHARSET;
+    }
+    
+    public String getContent(String urlString) {
+        String content = "";
         try {
-            if (conn.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                return null;
-            }
-        } catch (IOException e) {
+            content = getContentFromConnection(getConnectionWithCheck(urlString));
+        } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return "";
         }
-        InputStream input = conn.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(input,
-                charset));
-        String line = null;
-        StringBuffer sb = new StringBuffer();
-        while ((line = reader.readLine()) != null) {
-            sb.append(line).append("\r\n");
-        }
-        if (reader != null) {
-            reader.close();
-        }
-        if (conn != null) {
-            conn.disconnect();
-        }
-        return sb.toString();
-
+        return content;
     }
-
-    /**
-     * 网页抓取方法
-     * 
-     * @param urlString
-     *            要抓取的url地址
-     * @return 抓取的网页内容
-     * @throws IOException
-     *             抓取异常
-     */
-    public static String GetWebContent(String urlString) throws IOException {
-        return getWebContent(urlString, "iso-8859-1", 5000);
-    }
-
-    /**
-     * 网页抓取方法
-     * 
-     * @param urlString
-     *            要抓取的url地址
-     * @param pageCharset
-     *            目标网页编码方式
-     * @return 抓取的网页内容
-     * @throws IOException
-     *             抓取异常
-     */
-    public static String getWebContent(String urlString, String pageCharset)
-            throws IOException {
-        String strHTML = getWebContent(urlString, "iso-8859-1", 5000);
-        String StrEncode = new String(strHTML.getBytes("iso-8859-1"),
-                pageCharset);
-        return StrEncode;
-    }
-
-    /**
-     * 设定代理服务器
-     * 
-     * @param proxyHost
-     * @param proxyPort
-     */
-    public static void setProxy(String proxyHost, String proxyPort) {
-        setProxy(proxyHost, proxyPort, null, null);
-    }
-
-    /**
-     * 设定代理服务器
-     * 
-     * @param proxyHost
-     *            代理服务器的地址
-     * @param proxyPort
-     *            代理服务器的端口
-     * @param proxyUser
-     *            代理服务器用户名
-     * @param proxyPassword
-     *            代理服务器密码
-     */
-    public static void setProxy(String sproxyHost, String sproxyPort,
-            String sproxyUser, String sproxyPassword) {
-        proxyHost = sproxyHost;
-        proxyPort = sproxyPort;
-        if (sproxyPassword != null && sproxyPassword.length() > 0) {
-            proxyUser = sproxyUser;
-            proxyPassword = sproxyPassword;
+    
+    public void convertCharset(String htmlString, String oldCharset, String newCharset) {
+        try {
+            htmlString = new String(htmlString.getBytes(oldCharset), newCharset);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
     }
 
-    /**
-     * 取得代理设定
-     * 
-     * @return
-     */
-    private static Properties getProxy() {
-        Properties propRet = null;
-        if (proxyHost != null && proxyHost.length() > 0) {
-            propRet = System.getProperties();
-            // 设置http访问要使用的代理服务器的地址
-            propRet.setProperty("http.proxyHost", proxyHost);
-            // 设置http访问要使用的代理服务器的端口
-            propRet.setProperty("http.proxyPort", proxyPort);
-            if (proxyUser != null && proxyUser.length() > 0) {
-                // 用户名密码
-                propRet.setProperty("http.proxyUser", proxyUser);
-                propRet.setProperty("http.proxyPassword", proxyPassword);
-            }
-        }
-
-        return propRet;
-    }
-
-    /**
-     * 类测试函数
-     * 
-     * @param args
-     * @throws IOException
-     */
     public static void main(String[] args) throws IOException {
         // SetProxy("10.10.10.10", "8080");//代理服务器设定
-        String s = getWebContent("www.xiami.com/song/1770760764", "utf-8");
+        String s = (new WebClient()).getContent("www.xiami.com/song/1770760764");
         System.out.println(s);
     }
 }

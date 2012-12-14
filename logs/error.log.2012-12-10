@@ -1,0 +1,1958 @@
+2012-12-10 10:57:32,007 vivi.utils.domain.weibo.WeiboUrl:36 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: Read timed out
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:422)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:26)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:228)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:237)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.readV3Record(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at org.apache.commons.httpclient.HttpConnection.flushRequestOutputStream(HttpConnection.java:828)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.flushRequestOutputStream(MultiThreadedHttpConnectionManager.java:1565)
+	at org.apache.commons.httpclient.HttpMethodBase.writeRequest(HttpMethodBase.java:2116)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1096)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:396)
+	... 7 more
+2012-12-10 11:19:56,094 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.ed7041f.50c554db.b0c938fc][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:19:55 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:19:56,096 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.ed8241f.50c554db.adb346f0][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:32,939 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.eb515bbb.50c55848.a94d5a50][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:34:32 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:32,941 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.eb675bbb.50c55848.49e3dfcf][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:46,636 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.dc4940f7.50c55856.bb0591c3][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:34:46 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:46,637 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.dc5c40f7.50c55856.3e44ffbf][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:51,026 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.822e1dd0.50c5585a.b6b3523b][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:34:50 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:51,026 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.82421dd0.50c5585a.b4692365][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:53,798 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.ba6a5bf8.50c5585d.1753017b][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:34:53 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:34:53,799 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.ba7d5bf8.50c5585d.a23e9f74][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:02,054 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.bf435bf8.50c55865.80799622][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:01 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:02,055 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.bf575bf8.50c55865.1d67d996][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:12,880 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.a6a74194.50c55870.b7e4c8e1][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:12 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:12,880 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.a6bb4194.50c55870.951aa6aa][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:20,475 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.101c6337.50c55878.b85ea70a][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:20 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:20,475 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.10306337.50c55878.d46cf3f5][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:25,299 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.32140f7.50c5587d.71b740b2][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:25 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:25,300 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.33440f7.50c5587d.d36af855][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:33,607 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.cef37846.50c55885.17b3092c][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:33 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:33,607 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.cf087846.50c55885.663dfc75][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:41,635 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.ea49787a.50c5588d.4e2012bb][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:41 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:41,636 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.ea63787a.50c5588d.c0e3918c][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:51,191 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.e1b05bf8.50c55896.52503706][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:50 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:51,191 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.e1c45bf8.50c55896.e90550df][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:55,516 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.79e83015.50c5589b.81ad2ba5][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:35:55 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:35:55,516 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.79f93015.50c5589b.c719e213][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:02,534 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.6aef7700.50c558a2.50a2b535][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:36:02 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:02,535 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.6b027700.50c558a2.3551b56a][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:16,230 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.2ed76c69.50c558b0.f3350299][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:36:16 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:16,230 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.2ee86c69.50c558b0.fa5e6cbf][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:29,436 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.11477132.50c558bd.33b363f7][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:36:29 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:29,437 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.115d7132.50c558bd.730b564f][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:57,711 vivi.net.RequestRobot:326 [ERROR]: construct Status exception: 
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.read(AbstractSessionInputBuffer.java:204)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:177)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.Reader.read(Unknown Source)
+	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:224)
+	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:248)
+	at vivi.net.RequestRobot$ContentResponse.<init>(RequestRobot.java:278)
+	at vivi.net.RequestRobot$1.handleResponse(RequestRobot.java:134)
+	at vivi.net.RequestRobot$1.handleResponse(RequestRobot.java:1)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:1070)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:1044)
+	at vivi.net.RequestRobot.doPost(RequestRobot.java:140)
+	at vivi.net.RequestRobot.getStatusList(RequestRobot.java:308)
+	at vivi.net.RequestRobot.writeTimeline(RequestRobot.java:339)
+	at vivi.net.RequestRobot.main(RequestRobot.java:392)
+2012-12-10 11:36:59,978 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.447d5c8c.50c558db.a82bc99f][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:36:59 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:36:59,978 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.44925c8c.50c558db.75c6f49d][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:37:18,708 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.997c26a6.50c558ee.d99884a7][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:37:18 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:37:18,708 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.998e26a6.50c558ee.1b8fb3c1][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:37:32,716 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.3ab22089.50c558fc.8fe3f7d3][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:37:32 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:37:32,717 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.3ac52089.50c558fc.9b478ceb][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:59:43,935 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.f41b67e9.50c55e2f.4bd44196][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 11:59:43 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 11:59:43,937 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.f42f67e9.50c55e2f.56d424f3][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 12:26:07,935 vivi.utils.domain.weibo.WeiboUrl:56 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: Remote host closed connection during handshake
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:422)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:53)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:27)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:226)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:235)
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(Unknown Source)
+	at sun.security.ssl.AppOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at org.apache.commons.httpclient.HttpConnection.flushRequestOutputStream(HttpConnection.java:828)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.flushRequestOutputStream(MultiThreadedHttpConnectionManager.java:1565)
+	at org.apache.commons.httpclient.HttpMethodBase.writeRequest(HttpMethodBase.java:2116)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1096)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:396)
+	... 7 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	... 22 more
+2012-12-10 13:15:40,622 vivi.utils.parser.SinaWeiboParser:237 [ INFO]: start request timeline: 2012-12-10 13:15:40
+2012-12-10 13:15:41,313 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.4a852446.50c56ffc.0d781c7f][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:40 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:41,313 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.4a992446.50c56ffc.549d1ec9][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:44,146 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.31496771.50c56fff.af09a8b2][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:43 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:44,147 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.315b6771.50c56fff.74c173dc][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:47,098 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.e7203cdd.50c57002.ccb1df92][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:46 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:47,099 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.e7333cdd.50c57002.f458c3fc][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:51,500 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.52fd2446.50c57007.5348cdbf][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:51 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:51,501 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.53122446.50c57007.9d6e69c5][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:54,540 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.8ce564a.50c5700a.2c1b8745][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:54 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:54,540 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.8e0564a.50c5700a.7866c9c4][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:59,296 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.a22a129b.50c5700f.d8aa0cb2][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:15:59 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:15:59,297 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.a23c129b.50c5700f.21282c26][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:03,779 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.251990d.50c57013.6c5b4244][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:03 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:03,779 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.252b90d.50c57013.c98612e4][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:06,382 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.617c79eb.50c57016.2e5f2f14][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:06 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:06,383 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.618f79eb.50c57016.4a27474a][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:09,047 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.b3c47cb7.50c57018.b5a376d8][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:08 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:09,047 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.b3d87cb7.50c57018.afad6ef8][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:12,200 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.deaa7743.50c5701b.c8d42db6][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:11 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:12,200 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.debc7743.50c5701b.26e0342c][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:17,528 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.a68f7e14.50c57021.504ea4ce][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:17 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:17,528 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.a6a37e14.50c57021.e5c810a2][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:20,177 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.24997e14.50c57023.21fab8f2][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:19 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:20,177 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.24ae7e14.50c57023.aa104ac8][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:22,869 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.bd633e58.50c57026.d9aecc6a][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:22 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:22,869 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.bd783e58.50c57026.d60f2a12][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:25,629 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.32427e14.50c57029.e404f771][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:25 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:25,629 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.32547e14.50c57029.d7856f35][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:28,574 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.3de77742.50c5702c.4c6df364][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:28 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:28,574 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.3dfa7742.50c5702c.a2d56915][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:31,333 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.81c974da.50c5702f.504b4097][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:31 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:31,333 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.81da74da.50c5702f.4e57404d][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:34,067 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.e1742da2.50c57031.9e380754][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:33 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:34,068 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.e1872da2.50c57031.cb021b98][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:36,687 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS1][value: 0000006d.24957e14.50c57034.e829469e][domain: .sina.com.cn][path: /][expiry: Thu Dec 08 13:16:36 CST 2022]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:36,687 org.apache.http.client.protocol.ResponseProcessCookies:127 [ WARN]: Cookie rejected: "[version: 0][name: U_TRS2][value: 0000006d.24a97e14.50c57034.36cc9f8c][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "open.weibo.com"
+2012-12-10 13:16:40,030 vivi.utils.parser.SinaWeiboParser:245 [ INFO]: start request urlInfo: 2012-12-10 13:16:40
+2012-12-10 13:27:29,312 vivi.utils.parser.SinaWeiboParser:247 [ INFO]: start request urlInfo: 2012-12-10 13:27:29
+2012-12-10 13:27:30,548 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:30,592 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:30,634 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:30,677 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,619 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,660 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,702 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,744 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,908 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:33,953 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,004 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,048 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,204 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,245 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,287 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,365 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,810 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,852 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,895 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:34,937 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:35,090 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:35,132 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:35,180 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:27:35,222 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:28:05,084 vivi.utils.parser.SinaWeiboParser:247 [ INFO]: start request urlInfo: 2012-12-10 13:28:05
+2012-12-10 13:28:37,399 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:28:37,444 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:28:37,486 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:28:37,531 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:248)
+2012-12-10 13:30:08,622 vivi.utils.parser.SinaWeiboParser:248 [ INFO]: start request urlInfo: 2012-12-10 13:30:08
+2012-12-10 13:30:09,146 vivi.utils.parser.SinaWeiboParser:227 [ INFO]: get http://t.cn/zjvD8BZ
+2012-12-10 13:30:12,021 vivi.utils.parser.SinaWeiboParser:227 [ INFO]: get 
+2012-12-10 13:30:12,177 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:228)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:249)
+2012-12-10 13:30:12,221 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:228)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:249)
+2012-12-10 13:30:12,264 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:228)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:249)
+2012-12-10 13:30:12,305 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:228)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:249)
+2012-12-10 13:32:00,389 vivi.utils.parser.SinaWeiboParser:248 [ INFO]: start request urlInfo: 2012-12-10 13:32:00
+2012-12-10 13:32:13,982 vivi.utils.parser.SinaWeiboParser:248 [ INFO]: start request urlInfo: 2012-12-10 13:32:13
+2012-12-10 13:32:47,653 vivi.utils.parser.SinaWeiboParser:248 [ INFO]: start request urlInfo: 2012-12-10 13:32:47
+2012-12-10 13:33:32,888 vivi.utils.parser.SinaWeiboParser:248 [ INFO]: start request urlInfo: 2012-12-10 13:33:32
+2012-12-10 13:35:27,354 vivi.utils.parser.SinaWeiboParser:246 [ INFO]: start request urlInfo: 2012-12-10 13:35:27
+2012-12-10 13:35:49,178 vivi.utils.parser.SinaWeiboParser:226 [ INFO]: get 
+2012-12-10 13:35:49,701 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:247)
+2012-12-10 13:35:49,753 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:247)
+2012-12-10 13:35:49,798 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:247)
+2012-12-10 13:35:49,846 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:227)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:247)
+2012-12-10 13:36:55,586 vivi.utils.parser.SinaWeiboParser:250 [ INFO]: start request urlInfo: 2012-12-10 13:36:55
+2012-12-10 13:36:56,087 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvD8BZ
+2012-12-10 13:36:58,642 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get 
+2012-12-10 13:37:01,810 vivi.utils.domain.weibo.WeiboUrl:66 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Wrong arguments! error_code:21504/sinaurl/public/expand.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shortToLongUrl(ShortUrl.java:29)
+	at vivi.utils.domain.weibo.WeiboUrl.initLongUrls(WeiboUrl.java:63)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:31)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:229)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:251)
+2012-12-10 13:37:01,857 vivi.utils.domain.weibo.WeiboUrl:55 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/clicks.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.clicksOfUrl(ShortUrl.java:40)
+	at vivi.utils.domain.weibo.WeiboUrl.initClicks(WeiboUrl.java:52)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:32)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:229)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:251)
+2012-12-10 13:37:01,903 vivi.utils.domain.weibo.WeiboUrl:77 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/comment/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.commentCountOfUrl(ShortUrl.java:94)
+	at vivi.utils.domain.weibo.WeiboUrl.initCommentCount(WeiboUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:33)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:229)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:251)
+2012-12-10 13:37:01,949 vivi.utils.domain.weibo.WeiboUrl:88 [ERROR]: error when get clicks json: 
+weibo4j.model.WeiboException: 400:The request was invalid.  An accompanying error message will explain why. This is the status code will be returned during rate limiting.
+ error:Error: Parameter value is not valid! error_code:40096/trackurl/v2/share/counts.json
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:413)
+	at weibo4j.http.HttpClient.httpRequest(HttpClient.java:371)
+	at weibo4j.http.HttpClient.get(HttpClient.java:203)
+	at weibo4j.ShortUrl.shareCountsOfUrl(ShortUrl.java:74)
+	at vivi.utils.domain.weibo.WeiboUrl.initShareCount(WeiboUrl.java:85)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:34)
+	at vivi.utils.domain.weibo.WeiboUrl.<init>(WeiboUrl.java:39)
+	at vivi.utils.parser.SinaWeiboParser.writeWeiboUrlInfos(SinaWeiboParser.java:229)
+	at vivi.utils.parser.SinaWeiboParser.main(SinaWeiboParser.java:251)
+2012-12-10 13:37:26,032 vivi.utils.parser.SinaWeiboParser:250 [ INFO]: start request urlInfo: 2012-12-10 13:37:26
+2012-12-10 13:37:29,266 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvD8BZ
+2012-12-10 13:38:19,520 vivi.utils.parser.SinaWeiboParser:250 [ INFO]: start request urlInfo: 2012-12-10 13:38:19
+2012-12-10 13:38:25,858 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6Zb7A
+2012-12-10 13:38:36,650 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hoB1
+2012-12-10 13:38:43,593 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6vbqT
+2012-12-10 13:38:43,902 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiVdo2
+2012-12-10 13:38:44,209 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiVpaj
+2012-12-10 13:38:44,589 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiVJmm
+2012-12-10 13:38:44,898 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJa3Pe
+2012-12-10 13:38:45,213 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMDiMm
+2012-12-10 13:38:45,539 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxQyJc
+2012-12-10 13:38:45,856 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYXPh
+2012-12-10 13:38:46,171 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIMznF
+2012-12-10 13:38:46,478 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMdDkQ
+2012-12-10 13:38:46,827 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMDiMm
+2012-12-10 13:38:47,151 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM1jHS
+2012-12-10 13:38:47,463 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIB0JO
+2012-12-10 13:38:47,865 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIMznF
+2012-12-10 13:38:48,171 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMvP7Q
+2012-12-10 13:38:48,523 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIsg8J
+2012-12-10 13:38:48,838 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIDeDG
+2012-12-10 13:38:49,152 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIB0JO
+2012-12-10 13:38:49,470 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjffh5h
+2012-12-10 13:38:49,809 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIGJPT
+2012-12-10 13:38:50,120 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI4A3l
+2012-12-10 13:38:50,447 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIzfm1
+2012-12-10 13:38:50,762 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjffh5h
+2012-12-10 13:38:54,103 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfCDxi
+2012-12-10 13:38:54,460 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfCDxi
+2012-12-10 13:38:54,813 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfiXt4
+2012-12-10 13:38:55,131 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjffh5h
+2012-12-10 13:38:55,439 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfIG1t
+2012-12-10 13:38:55,750 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjffh5h
+2012-12-10 13:38:56,061 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfblDT
+2012-12-10 13:38:56,375 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtnZke
+2012-12-10 13:38:56,687 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtY5KS
+2012-12-10 13:38:57,003 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtnZke
+2012-12-10 13:38:57,310 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtHLHY
+2012-12-10 13:38:57,737 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqDLez
+2012-12-10 13:38:58,056 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:38:58,377 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj53Pfn
+2012-12-10 13:38:58,690 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj53Pfn
+2012-12-10 13:38:59,027 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5muBn
+2012-12-10 13:38:59,344 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqDLez
+2012-12-10 13:39:02,650 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:02,979 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5P7Sx
+2012-12-10 13:39:03,291 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqsHGB
+2012-12-10 13:39:03,713 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqBPUn
+2012-12-10 13:39:04,027 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq3qFr
+2012-12-10 13:39:04,348 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGDHGl
+2012-12-10 13:39:04,672 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:05,006 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq2rB1
+2012-12-10 13:39:05,363 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGs4Po
+2012-12-10 13:39:05,662 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGDHGl
+2012-12-10 13:39:05,951 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:06,268 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbQMO5
+2012-12-10 13:39:06,563 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbmLrb
+2012-12-10 13:39:06,878 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbEQ4v
+2012-12-10 13:39:07,275 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:07,600 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLFFqM
+2012-12-10 13:39:07,959 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjb7Spn
+2012-12-10 13:39:08,310 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjb75XD
+2012-12-10 13:39:08,671 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUYog9
+2012-12-10 13:39:12,693 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUWerT
+2012-12-10 13:39:12,988 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUp4L8
+2012-12-10 13:39:13,589 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjybvrN
+2012-12-10 13:39:14,163 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjU9frA
+2012-12-10 13:39:14,471 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyGW7j
+2012-12-10 13:39:14,801 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:15,192 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL487r
+2012-12-10 13:39:16,208 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy3U1e
+2012-12-10 13:39:16,519 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyEfST
+2012-12-10 13:39:16,846 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy8exL
+2012-12-10 13:39:17,158 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjybvrN
+2012-12-10 13:39:17,476 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyGW7j
+2012-12-10 13:39:17,770 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:18,083 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjybvrN
+2012-12-10 13:39:18,441 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy45f4
+2012-12-10 13:39:18,766 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyUCGJ
+2012-12-10 13:39:19,181 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLxmlM
+2012-12-10 13:39:19,747 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2HBPs
+2012-12-10 13:39:20,034 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2luG8
+2012-12-10 13:39:20,345 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL487r
+2012-12-10 13:39:20,649 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:20,959 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL6yLk
+2012-12-10 13:39:21,278 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLxmlM
+2012-12-10 13:39:21,581 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2HBPs
+2012-12-10 13:39:21,940 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL487r
+2012-12-10 13:39:22,225 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2luG8
+2012-12-10 13:39:22,515 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:22,807 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2HBPs
+2012-12-10 13:39:23,114 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2lMJW
+2012-12-10 13:39:23,402 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2pRUf
+2012-12-10 13:39:23,694 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2NOEb
+2012-12-10 13:39:23,998 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2CfQb
+2012-12-10 13:39:24,296 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzMgeE
+2012-12-10 13:39:24,585 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrQubf
+2012-12-10 13:39:24,871 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxjhFp
+2012-12-10 13:39:25,161 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxljzt
+2012-12-10 13:39:25,448 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxlLYc
+2012-12-10 13:39:25,755 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM7VeO
+2012-12-10 13:39:26,055 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMSSs1
+2012-12-10 13:39:26,351 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMviIh
+2012-12-10 13:39:26,644 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMhnzP
+2012-12-10 13:39:26,938 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfmStY
+2012-12-10 13:39:27,233 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVe96n
+2012-12-10 13:39:27,532 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVBr7q
+2012-12-10 13:39:27,839 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVdYx8
+2012-12-10 13:39:28,177 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtBH2F
+2012-12-10 13:39:28,478 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt31mR
+2012-12-10 13:39:28,776 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5CQ71
+2012-12-10 13:39:29,071 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtn6dd
+2012-12-10 13:39:29,417 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5lPav
+2012-12-10 13:39:29,709 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj50Lfi
+2012-12-10 13:39:30,039 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5XD8E
+2012-12-10 13:39:30,329 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj56ohe
+2012-12-10 13:39:30,622 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5LLge
+2012-12-10 13:39:30,922 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqnIEA
+2012-12-10 13:39:31,219 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq8kfH
+2012-12-10 13:39:31,521 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqyvnx
+2012-12-10 13:39:31,874 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqPR9o
+2012-12-10 13:39:32,161 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbgjQH
+2012-12-10 13:39:32,445 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbRMMm
+2012-12-10 13:39:32,798 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy1S1w
+2012-12-10 13:39:33,083 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyuImS
+2012-12-10 13:39:33,371 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLgEO8
+2012-12-10 13:39:33,659 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/aF0REY
+2012-12-10 13:39:33,946 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLSVt2
+2012-12-10 13:39:34,244 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLVW0A
+2012-12-10 13:39:34,548 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLtUiF
+2012-12-10 13:39:34,844 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2jXQt
+2012-12-10 13:39:35,138 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2Ciqu
+2012-12-10 13:39:35,430 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrJbnh
+2012-12-10 13:39:35,731 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZEnsB
+2012-12-10 13:39:36,016 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZJx3B
+2012-12-10 13:39:36,302 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzo7jC
+2012-12-10 13:39:36,592 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzo7jC
+2012-12-10 13:39:36,885 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzsPDu
+2012-12-10 13:39:37,177 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7XWXH
+2012-12-10 13:39:37,461 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7Oio0
+2012-12-10 13:39:37,745 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7r0jO
+2012-12-10 13:39:38,042 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrxyph
+2012-12-10 13:39:38,343 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrisaj
+2012-12-10 13:39:38,652 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlFGQa1
+2012-12-10 13:39:38,945 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPEnoh
+2012-12-10 13:39:39,229 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPGycq
+2012-12-10 13:39:39,517 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPU5Qp
+2012-12-10 13:39:39,802 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvkQCa
+2012-12-10 13:39:40,087 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvD8BZ
+2012-12-10 13:39:40,383 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvWsqD
+2012-12-10 13:39:40,680 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlr6yl1
+2012-12-10 13:39:40,971 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zWs3cYj
+2012-12-10 13:39:41,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlsIdSD
+2012-12-10 13:39:41,627 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlkD9fH
+2012-12-10 13:39:41,921 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlFGQa1
+2012-12-10 13:39:42,212 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zldI9Ty
+2012-12-10 13:39:42,501 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zldfo4H
+2012-12-10 13:39:42,826 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlgrp6k
+2012-12-10 13:39:43,135 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrMVZ7
+2012-12-10 13:39:43,418 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zldx7F0
+2012-12-10 13:39:43,722 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrxI86
+2012-12-10 13:39:44,017 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrnus0
+2012-12-10 13:39:44,306 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zldbLiN
+2012-12-10 13:39:44,589 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrJ94f
+2012-12-10 13:39:44,920 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlriISi
+2012-12-10 13:39:45,487 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlrLoKE
+2012-12-10 13:39:45,812 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlBFjkF
+2012-12-10 13:39:46,101 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj67nlJ
+2012-12-10 13:39:46,396 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6vjQF
+2012-12-10 13:39:46,676 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxj5x1
+2012-12-10 13:39:46,965 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWqCw
+2012-12-10 13:39:47,252 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMFQhk
+2012-12-10 13:39:47,559 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMn3MZ
+2012-12-10 13:39:47,861 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMRjYv
+2012-12-10 13:39:48,163 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMbvym
+2012-12-10 13:39:48,498 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM2enp
+2012-12-10 13:39:48,801 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMZ3N5
+2012-12-10 13:39:49,105 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFvb0
+2012-12-10 13:39:49,408 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIg02f
+2012-12-10 13:39:49,699 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIBYIl
+2012-12-10 13:39:50,005 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIc4Ef
+2012-12-10 13:39:50,313 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIGaRT
+2012-12-10 13:39:50,657 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhY9c
+2012-12-10 13:39:50,973 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIv7DL
+2012-12-10 13:39:51,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfa32R
+2012-12-10 13:39:51,569 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf6ABI
+2012-12-10 13:39:51,883 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfIhZL
+2012-12-10 13:39:52,221 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLd26
+2012-12-10 13:39:52,532 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfACgU
+2012-12-10 13:39:52,841 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtmeu8
+2012-12-10 13:39:53,151 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtE7D4
+2012-12-10 13:39:53,457 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtHUfa
+2012-12-10 13:39:53,778 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtYmyI
+2012-12-10 13:39:54,081 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtWsi2
+2012-12-10 13:39:54,412 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt00tu
+2012-12-10 13:39:54,722 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5wo37
+2012-12-10 13:39:55,028 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5h3gf
+2012-12-10 13:39:55,337 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqDpB1
+2012-12-10 13:39:55,757 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjquTTU
+2012-12-10 13:39:56,132 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqn4O3
+2012-12-10 13:39:56,454 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq4tN7
+2012-12-10 13:39:56,757 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqwwBx
+2012-12-10 13:39:57,087 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGkqoi
+2012-12-10 13:39:57,448 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGrTys
+2012-12-10 13:39:57,761 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbgw5w
+2012-12-10 13:39:58,082 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbEzKu
+2012-12-10 13:39:58,400 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbH35d
+2012-12-10 13:39:58,720 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUHvZP
+2012-12-10 13:39:59,026 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUWvCS
+2012-12-10 13:39:59,344 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjU9GcP
+2012-12-10 13:39:59,659 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUSEjx
+2012-12-10 13:39:59,973 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyDT7e
+2012-12-10 13:40:00,262 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjydPtu
+2012-12-10 13:40:00,568 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy38Yr
+2012-12-10 13:40:00,900 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy8sJD
+2012-12-10 13:40:01,218 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyH2G4
+2012-12-10 13:40:01,524 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjylmfI
+2012-12-10 13:40:01,857 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy23wD
+2012-12-10 13:40:02,170 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy7BhZ
+2012-12-10 13:40:02,623 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLDTzo
+2012-12-10 13:40:02,961 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLg8NH
+2012-12-10 13:40:03,268 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLKiTB
+2012-12-10 13:40:03,578 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLa2u1
+2012-12-10 13:40:03,885 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLXHyL
+2012-12-10 13:40:04,192 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLJBjj
+2012-12-10 13:40:04,617 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLcTM7
+2012-12-10 13:40:04,926 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLq3Hs
+2012-12-10 13:40:05,293 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2j6iq
+2012-12-10 13:40:05,647 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2pdTn
+2012-12-10 13:40:06,051 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj291om
+2012-12-10 13:40:06,354 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2oZKF
+2012-12-10 13:40:06,662 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjw9Hy3
+2012-12-10 13:40:06,963 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjw6bZg
+2012-12-10 13:40:07,268 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwxNLE
+2012-12-10 13:40:07,570 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwISsY
+2012-12-10 13:40:07,875 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZeoF5
+2012-12-10 13:40:08,179 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZ3T7o
+2012-12-10 13:40:08,488 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZ8ADY
+2012-12-10 13:40:08,800 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZjJkP
+2012-12-10 13:40:09,107 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZLucX
+2012-12-10 13:40:09,425 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZzNCH
+2012-12-10 13:40:09,731 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzDD4l
+2012-12-10 13:40:10,035 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzdD8C
+2012-12-10 13:40:10,372 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzxjQD
+2012-12-10 13:40:10,679 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzcyce
+2012-12-10 13:40:10,988 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjz4JBk
+2012-12-10 13:40:11,316 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzLaII
+2012-12-10 13:40:11,655 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxVRMM
+2012-12-10 13:40:11,975 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjV96fw
+2012-12-10 13:40:12,370 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtnIHZ
+2012-12-10 13:40:12,754 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5MKUD
+2012-12-10 13:40:13,061 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqUXSR
+2012-12-10 13:40:13,374 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqyHf6
+2012-12-10 13:40:13,687 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqyWW8
+2012-12-10 13:40:13,997 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjismob
+2012-12-10 13:40:14,345 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFy42
+2012-12-10 13:40:14,650 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxDC4p
+2012-12-10 13:40:14,956 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxBlhb
+2012-12-10 13:40:15,260 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxubIU
+2012-12-10 13:40:15,564 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxHuex
+2012-12-10 13:40:15,877 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxjpr6
+2012-12-10 13:40:16,185 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWAxC
+2012-12-10 13:40:16,492 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxZsTv
+2012-12-10 13:40:16,798 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxZ3L0
+2012-12-10 13:40:17,107 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMD92t
+2012-12-10 13:40:17,552 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMeWyO
+2012-12-10 13:40:17,870 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMubfr
+2012-12-10 13:40:18,175 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQqry
+2012-12-10 13:40:18,535 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQvql
+2012-12-10 13:40:18,845 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHHgJ
+2012-12-10 13:40:19,147 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHjI8
+2012-12-10 13:40:19,521 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHNFB
+2012-12-10 13:40:19,827 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMbiyW
+2012-12-10 13:40:20,196 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIqXt5
+2012-12-10 13:40:20,506 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIqtQt
+2012-12-10 13:40:20,809 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIURSf
+2012-12-10 13:40:21,111 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIU0e3
+2012-12-10 13:40:21,659 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIUNbC
+2012-12-10 13:40:22,008 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfF39F
+2012-12-10 13:40:22,392 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFEcD
+2012-12-10 13:40:22,693 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFTF0
+2012-12-10 13:40:22,992 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFWr7
+2012-12-10 13:40:23,318 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFCgi
+2012-12-10 13:40:23,630 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfJd5C
+2012-12-10 13:40:23,950 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfJzEY
+2012-12-10 13:40:24,255 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfyo1f
+2012-12-10 13:40:24,544 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLDls
+2012-12-10 13:40:24,834 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfL3eL
+2012-12-10 13:40:25,117 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLEop
+2012-12-10 13:40:25,405 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLHvv
+2012-12-10 13:40:25,730 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLNon
+2012-12-10 13:40:26,016 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVivPA
+2012-12-10 13:40:26,306 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtBmOn
+2012-12-10 13:40:26,600 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt3c47
+2012-12-10 13:40:26,889 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt3wqR
+2012-12-10 13:40:27,176 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtuWdb
+2012-12-10 13:40:27,469 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtmJTs
+2012-12-10 13:40:27,758 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtmzBs
+2012-12-10 13:40:28,049 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtOJNr
+2012-12-10 13:40:28,338 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtpndD
+2012-12-10 13:40:28,626 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtpazB
+2012-12-10 13:40:28,916 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtCJvV
+2012-12-10 13:40:29,208 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt7smf
+2012-12-10 13:40:29,562 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt7hfZ
+2012-12-10 13:40:29,908 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtPpHh
+2012-12-10 13:40:30,204 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtPXzh
+2012-12-10 13:40:30,491 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5eSrz
+2012-12-10 13:40:30,774 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5Q1bY
+2012-12-10 13:40:34,062 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QEWM
+2012-12-10 13:40:34,358 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QQmH
+2012-12-10 13:40:34,648 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QN4R
+2012-12-10 13:40:34,944 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj52kvV
+2012-12-10 13:40:35,251 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqFC6F
+2012-12-10 13:40:35,540 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqeTON
+2012-12-10 13:40:35,826 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjquRuY
+2012-12-10 13:40:36,135 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqQCbk
+2012-12-10 13:40:36,425 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqHDrJ
+2012-12-10 13:40:36,710 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqHdou
+2012-12-10 13:40:37,031 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqH3oY
+2012-12-10 13:40:37,317 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq2RmH
+2012-12-10 13:40:37,606 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq2q95
+2012-12-10 13:40:37,905 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqwrqr
+2012-12-10 13:40:38,207 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqZp12
+2012-12-10 13:40:38,499 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGuXWm
+2012-12-10 13:40:38,812 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGufqP
+2012-12-10 13:40:39,101 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGhdHQ
+2012-12-10 13:40:39,408 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbkhsq
+2012-12-10 13:40:39,696 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbedB5
+2012-12-10 13:40:39,981 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbdADA
+2012-12-10 13:40:40,281 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbdazV
+2012-12-10 13:40:40,571 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbdIsW
+2012-12-10 13:40:40,859 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbrr9W
+2012-12-10 13:40:41,150 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbr2W6
+2012-12-10 13:40:41,440 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbHl7U
+2012-12-10 13:40:41,729 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbQAnO
+2012-12-10 13:40:42,039 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUm633
+2012-12-10 13:40:42,457 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUEBRe
+2012-12-10 13:40:42,833 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUEoAl
+2012-12-10 13:40:43,244 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUCgFL
+2012-12-10 13:40:43,573 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj670n0
+2012-12-10 13:40:43,858 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hxfA
+2012-12-10 13:40:44,161 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFvkw
+2012-12-10 13:40:44,445 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFvTe
+2012-12-10 13:40:44,730 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjimzqE
+2012-12-10 13:40:45,020 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiYX2s
+2012-12-10 13:40:45,305 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjijjJs
+2012-12-10 13:40:45,595 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiCfQM
+2012-12-10 13:40:46,031 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiSzwR
+2012-12-10 13:40:46,317 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiJGrN
+2012-12-10 13:40:46,601 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiq3TF
+2012-12-10 13:40:46,893 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiq1VS
+2012-12-10 13:40:47,186 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJFC2s
+2012-12-10 13:40:47,476 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJFZd8
+2012-12-10 13:40:47,766 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJQ3PX
+2012-12-10 13:40:48,083 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJliLN
+2012-12-10 13:40:48,372 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJi9ld
+2012-12-10 13:40:48,673 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJXDSK
+2012-12-10 13:40:48,960 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJi9lB
+2012-12-10 13:40:49,254 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJi9lB
+2012-12-10 13:40:49,547 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJiKjk
+2012-12-10 13:40:49,840 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ4NkK
+2012-12-10 13:40:50,137 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxeUT6
+2012-12-10 13:40:50,422 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxdCiQ
+2012-12-10 13:40:50,707 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxBvr4
+2012-12-10 13:40:51,068 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx3gTv
+2012-12-10 13:40:51,357 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxnQKh
+2012-12-10 13:40:51,667 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWbDo
+2012-12-10 13:40:51,987 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYoof
+2012-12-10 13:40:52,298 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxq21K
+2012-12-10 13:40:52,622 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxOHzo
+2012-12-10 13:40:53,501 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxpPT9
+2012-12-10 13:40:54,261 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxxYN2
+2012-12-10 13:40:54,552 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxt63n
+2012-12-10 13:40:54,838 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxU1pY
+2012-12-10 13:40:55,349 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxA93A
+2012-12-10 13:40:56,599 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxAz6g
+2012-12-10 13:40:57,466 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx7hM4
+2012-12-10 13:40:57,758 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMsxxY
+2012-12-10 13:40:58,138 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMDqgv
+2012-12-10 13:40:58,540 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM3xHu
+2012-12-10 13:40:59,712 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMEVxg
+2012-12-10 13:41:00,468 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQza3
+2012-12-10 13:41:01,928 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMYdXz
+2012-12-10 13:41:02,223 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMSFgs
+2012-12-10 13:41:03,492 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMMIhl
+2012-12-10 13:41:04,112 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMtXDW
+2012-12-10 13:41:04,817 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMU3FD
+2012-12-10 13:41:05,112 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMyzWB
+2012-12-10 13:41:06,421 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMLU5o
+2012-12-10 13:41:06,774 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMZMf4
+2012-12-10 13:41:07,288 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFFmL
+2012-12-10 13:41:07,906 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIDiWd
+2012-12-10 13:41:08,197 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI3geO
+2012-12-10 13:41:08,486 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIujzd
+2012-12-10 13:41:09,223 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIuj3b
+2012-12-10 13:41:09,543 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIWFVS
+2012-12-10 13:41:09,847 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIpitR
+2012-12-10 13:41:10,144 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIxIvQ
+2012-12-10 13:41:11,188 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIVBnL
+2012-12-10 13:41:12,283 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIb6Uo
+2012-12-10 13:41:15,666 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIUzBJ
+2012-12-10 13:41:16,014 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhMcG
+2012-12-10 13:41:16,419 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIZTva
+2012-12-10 13:41:16,814 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIvrak
+2012-12-10 13:41:17,217 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfsfDv
+2012-12-10 13:41:17,641 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkbak
+2012-12-10 13:41:18,072 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfQmY9
+2012-12-10 13:41:18,428 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfT1zb
+2012-12-10 13:41:18,743 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfayEt
+2012-12-10 13:41:19,072 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf9IYW
+2012-12-10 13:41:19,572 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfS3Od
+2012-12-10 13:41:20,157 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/hbEznV
+2012-12-10 13:41:20,585 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfiWM6
+2012-12-10 13:41:21,013 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfG6GO
+2012-12-10 13:41:21,650 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfqREk
+2012-12-10 13:41:23,050 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfbtJZ
+2012-12-10 13:41:23,964 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf2aNT
+2012-12-10 13:41:24,337 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfZpYo
+2012-12-10 13:41:25,353 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjViRzi
+2012-12-10 13:41:26,775 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVJYZo
+2012-12-10 13:41:27,061 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVxsOi
+2012-12-10 13:41:27,408 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVf8VK
+2012-12-10 13:41:27,714 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVhu6F
+2012-12-10 13:41:28,033 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcdLws
+2012-12-10 13:41:28,385 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjc3yAf
+2012-12-10 13:41:28,685 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcnVV5
+2012-12-10 13:41:28,990 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcHVKM
+2012-12-10 13:41:29,307 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcC3cm
+2012-12-10 13:41:29,595 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji1S8p
+2012-12-10 13:41:29,898 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiGEmn
+2012-12-10 13:41:30,229 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx6NUY
+2012-12-10 13:41:30,532 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx8ZaE
+2012-12-10 13:41:30,814 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxT5fK
+2012-12-10 13:41:31,121 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxY7OO
+2012-12-10 13:41:31,426 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxjDBJ
+2012-12-10 13:41:31,728 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqTPJL
+2012-12-10 13:41:32,106 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx7lPs
+2012-12-10 13:41:32,441 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMgXs7
+2012-12-10 13:41:32,792 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMoGTZ
+2012-12-10 13:41:33,106 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI1rZX
+2012-12-10 13:41:33,407 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIlO8C
+2012-12-10 13:41:33,723 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIox01
+2012-12-10 13:41:34,094 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIfC5f
+2012-12-10 13:41:34,406 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIlQ1T
+2012-12-10 13:41:34,714 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf1nYH
+2012-12-10 13:41:35,026 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfXah9
+2012-12-10 13:41:35,339 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFZA2
+2012-12-10 13:41:35,684 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIbTIq
+2012-12-10 13:41:36,020 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfDXET
+2012-12-10 13:41:36,308 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfnepJ
+2012-12-10 13:41:36,612 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVkbpB
+2012-12-10 13:41:36,920 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUREeZ
+2012-12-10 13:41:37,225 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfomYU
+2012-12-10 13:41:37,529 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf6CGn
+2012-12-10 13:41:37,863 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVD8Cd
+2012-12-10 13:41:38,152 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxrCZZ
+2012-12-10 13:41:38,466 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxUdIw
+2012-12-10 13:41:38,760 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIJu0L
+2012-12-10 13:41:39,074 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtBU87
+2012-12-10 13:41:39,386 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtfKWa
+2012-12-10 13:41:39,695 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtfKyM
+2012-12-10 13:41:40,013 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtDqZq
+2012-12-10 13:41:40,372 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiB9kw
+2012-12-10 13:41:40,688 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDMbx
+2012-12-10 13:41:40,992 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji3jU9
+2012-12-10 13:41:41,308 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjig3dK
+2012-12-10 13:41:41,665 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjirFdN
+2012-12-10 13:41:42,039 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjifl8n
+2012-12-10 13:41:42,401 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiV734
+2012-12-10 13:41:42,711 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiqbc9
+2012-12-10 13:41:43,018 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ6t8F
+2012-12-10 13:41:43,331 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJX3Pa
+2012-12-10 13:41:43,657 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJheIh
+2012-12-10 13:41:43,969 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxoYUD
+2012-12-10 13:41:44,346 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxpybL
+2012-12-10 13:41:44,655 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx9rfK
+2012-12-10 13:41:44,962 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxpzjv
+2012-12-10 13:41:45,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxa83U
+2012-12-10 13:41:45,571 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx97Ww
+2012-12-10 13:41:45,877 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMWNiS
+2012-12-10 13:41:46,184 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMYhWQ
+2012-12-10 13:41:46,490 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMTos9
+2012-12-10 13:41:46,807 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMTQmh
+2012-12-10 13:41:47,228 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMH9Mv
+2012-12-10 13:41:47,549 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM91fi
+2012-12-10 13:41:47,877 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMl5Pk
+2012-12-10 13:41:48,195 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMh06n
+2012-12-10 13:41:48,506 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIe6W3
+2012-12-10 13:41:48,816 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI3PXy
+2012-12-10 13:41:49,127 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI8LMY
+2012-12-10 13:41:49,438 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIud1n
+2012-12-10 13:41:49,753 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIuERp
+2012-12-10 13:41:50,062 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIul3c
+2012-12-10 13:41:50,394 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIMItK
+2012-12-10 13:41:50,704 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf36qB
+2012-12-10 13:41:51,017 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkMNo
+2012-12-10 13:41:51,331 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfeTpF
+2012-12-10 13:41:51,646 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkqrF
+2012-12-10 13:41:51,983 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkLnK
+2012-12-10 13:41:52,321 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfk7q1
+2012-12-10 13:41:52,654 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfTHMj
+2012-12-10 13:41:53,066 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfKYtd
+2012-12-10 13:41:53,400 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAKju
+2012-12-10 13:41:53,735 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAaXY
+2012-12-10 13:41:55,276 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAV5H
+2012-12-10 13:41:55,869 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVs2PT
+2012-12-10 13:41:56,201 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfA4FL
+2012-12-10 13:41:59,545 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfwgh9
+2012-12-10 13:41:59,852 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVaX1k
+2012-12-10 13:42:00,169 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcNugK
+2012-12-10 13:42:00,475 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjc96x0
+2012-12-10 13:42:00,785 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcLpsb
+2012-12-10 13:42:04,532 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtNCEc
+2012-12-10 13:42:04,953 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtNiEX
+2012-12-10 13:42:05,523 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtNJdE
+2012-12-10 13:42:05,838 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtV2vD
+2012-12-10 13:42:06,200 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjta32H
+2012-12-10 13:42:06,532 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtCwQa
+2012-12-10 13:42:06,893 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtVnZi
+2012-12-10 13:42:07,391 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtVUrQ
+2012-12-10 13:42:07,721 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtV2vD
+2012-12-10 13:42:08,043 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtVPQN
+2012-12-10 13:42:08,605 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtAhfE
+2012-12-10 13:42:08,914 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjttVn9
+2012-12-10 13:42:09,228 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt7iAp
+2012-12-10 13:42:09,584 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5H6bH
+2012-12-10 13:42:09,961 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5HHcN
+2012-12-10 13:42:10,473 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5Hlk2
+2012-12-10 13:42:10,833 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5lzM9
+2012-12-10 13:42:11,177 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5HN3G
+2012-12-10 13:42:11,485 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj564Yr
+2012-12-10 13:42:11,803 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqx8x5
+2012-12-10 13:42:12,342 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqTdb3
+2012-12-10 13:42:16,122 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqT3qk
+2012-12-10 13:42:16,429 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqTmCo
+2012-12-10 13:42:16,778 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqTEMY
+2012-12-10 13:42:20,292 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqYPDD
+2012-12-10 13:42:20,587 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGn9Rh
+2012-12-10 13:42:20,878 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGnK7l
+2012-12-10 13:42:21,167 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGnMFZ
+2012-12-10 13:42:21,452 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGncAw
+2012-12-10 13:42:21,740 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGnZQk
+2012-12-10 13:42:22,045 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGnzhR
+2012-12-10 13:42:22,370 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGPFQF
+2012-12-10 13:42:22,666 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbHW6C
+2012-12-10 13:42:22,950 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbYYCd
+2012-12-10 13:42:23,249 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbTFDB
+2012-12-10 13:42:23,589 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbTdov
+2012-12-10 13:42:23,881 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbT1Q1
+2012-12-10 13:42:24,187 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbT7Ph
+2012-12-10 13:42:24,477 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj46Lx7
+2012-12-10 13:42:24,766 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj4atD5
+2012-12-10 13:42:25,052 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj45xfG
+2012-12-10 13:42:25,370 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj4fHhz
+2012-12-10 13:42:25,670 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj45xyT
+2012-12-10 13:42:25,973 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hLga
+2012-12-10 13:42:26,265 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDGwq
+2012-12-10 13:42:26,556 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiD7mD
+2012-12-10 13:42:26,847 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiegko
+2012-12-10 13:42:27,134 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjierlN
+2012-12-10 13:42:27,425 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjieuPh
+2012-12-10 13:42:27,730 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjieRKO
+2012-12-10 13:42:28,015 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiejmy
+2012-12-10 13:42:28,312 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjie0G5
+2012-12-10 13:42:28,598 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjieNhc
+2012-12-10 13:42:28,912 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiNPwW
+2012-12-10 13:42:29,218 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjixvJW
+2012-12-10 13:42:29,501 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjitfNK
+2012-12-10 13:42:29,788 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJMQku
+2012-12-10 13:42:30,078 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJMc2x
+2012-12-10 13:42:30,411 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJMLDM
+2012-12-10 13:42:30,714 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ2sts
+2012-12-10 13:42:30,999 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxjBNk
+2012-12-10 13:42:31,346 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxOcZq
+2012-12-10 13:42:31,640 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMDnQf
+2012-12-10 13:42:31,930 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMn6sE
+2012-12-10 13:42:32,235 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQtnK
+2012-12-10 13:42:32,525 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8TA0
+2012-12-10 13:42:32,812 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8oQQ
+2012-12-10 13:42:33,149 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8Mwf
+2012-12-10 13:42:33,432 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFG7A
+2012-12-10 13:42:33,722 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFH0l
+2012-12-10 13:42:34,017 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFdIM
+2012-12-10 13:42:34,307 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIsVoD
+2012-12-10 13:42:34,600 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIsl3j
+2012-12-10 13:42:34,902 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM5eaj
+2012-12-10 13:42:35,200 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM2lsX
+2012-12-10 13:42:35,530 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjImQEi
+2012-12-10 13:42:35,841 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjISOot
+2012-12-10 13:42:36,167 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIilFu
+2012-12-10 13:42:36,472 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIfB9I
+2012-12-10 13:42:36,776 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIValR
+2012-12-10 13:42:37,089 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfF415
+2012-12-10 13:42:37,498 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFto1
+2012-12-10 13:42:37,940 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFwAD
+2012-12-10 13:42:38,519 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFySr
+2012-12-10 13:42:38,848 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFYTQ
+2012-12-10 13:42:39,137 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfF2fN
+2012-12-10 13:42:39,431 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfksiR
+2012-12-10 13:42:40,936 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkMQK
+2012-12-10 13:42:41,249 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfDiFO
+2012-12-10 13:42:41,600 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfDtsn
+2012-12-10 13:42:41,898 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfp6XC
+2012-12-10 13:42:42,194 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfpPiX
+2012-12-10 13:42:42,493 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfowon
+2012-12-10 13:42:42,782 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfIjBs
+2012-12-10 13:42:43,071 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf2ZRs
+2012-12-10 13:42:43,425 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAuu2
+2012-12-10 13:42:43,719 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAML8
+2012-12-10 13:42:44,008 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAyBJ
+2012-12-10 13:42:44,293 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAPem
+2012-12-10 13:42:44,579 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfw35J
+2012-12-10 13:42:44,873 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfwYth
+2012-12-10 13:42:45,165 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfw6fe
+2012-12-10 13:42:45,453 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf20RL
+2012-12-10 13:42:45,746 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfw4Lc
+2012-12-10 13:42:46,040 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcjQum
+2012-12-10 13:42:46,347 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjc9Qms
+2012-12-10 13:42:46,662 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcPCaw
+2012-12-10 13:42:46,957 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcvXOV
+2012-12-10 13:42:47,245 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtkiVi
+2012-12-10 13:42:47,527 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtEjyo
+2012-12-10 13:42:47,813 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtl8vm
+2012-12-10 13:42:48,100 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtO4PF
+2012-12-10 13:42:48,397 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtOMjx
+2012-12-10 13:42:48,684 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtO1N0
+2012-12-10 13:42:49,019 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtODGM
+2012-12-10 13:42:49,312 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt0TzI
+2012-12-10 13:42:49,602 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtOw5K
+2012-12-10 13:42:49,894 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5mmqj
+2012-12-10 13:42:50,194 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5nwBm
+2012-12-10 13:42:50,486 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5R0eJ
+2012-12-10 13:42:50,790 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58ogU
+2012-12-10 13:42:51,079 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58xa0
+2012-12-10 13:42:51,372 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58cqL
+2012-12-10 13:42:51,667 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58y9a
+2012-12-10 13:42:52,050 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58ZRh
+2012-12-10 13:42:52,564 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QD44
+2012-12-10 13:42:52,864 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QuiE
+2012-12-10 13:42:53,193 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QWvy
+2012-12-10 13:42:53,495 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5QClY
+2012-12-10 13:42:53,785 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjquEKY
+2012-12-10 13:42:54,092 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqH8tP
+2012-12-10 13:42:54,382 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqHllS
+2012-12-10 13:42:54,678 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqHmzH
+2012-12-10 13:42:54,976 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqE4f3
+2012-12-10 13:42:55,268 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqRGVa
+2012-12-10 13:42:55,555 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq85af
+2012-12-10 13:42:55,897 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqXJ5p
+2012-12-10 13:42:56,197 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqXTo7
+2012-12-10 13:42:56,487 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq27QH
+2012-12-10 13:42:56,814 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqwM2A
+2012-12-10 13:42:57,110 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjG2SRr
+2012-12-10 13:42:57,402 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjG3Gg7
+2012-12-10 13:42:57,728 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6ZRjg
+2012-12-10 13:42:58,032 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hNSA
+2012-12-10 13:42:58,337 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjikaYl
+2012-12-10 13:42:58,638 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjikNK6
+2012-12-10 13:42:58,941 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiksEU
+2012-12-10 13:42:59,244 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjik5LU
+2012-12-10 13:42:59,537 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiqQGq
+2012-12-10 13:42:59,837 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjit1oQ
+2012-12-10 13:43:00,139 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJKfNe
+2012-12-10 13:43:00,456 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJSkXF
+2012-12-10 13:43:00,763 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ9GCm
+2012-12-10 13:43:01,083 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJSJtz
+2012-12-10 13:43:01,464 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJKfMQ
+2012-12-10 13:43:01,876 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJSJtU
+2012-12-10 13:43:02,259 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJA3wt
+2012-12-10 13:43:02,595 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxds4r
+2012-12-10 13:43:02,994 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWGc7
+2012-12-10 13:43:03,431 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWGcv
+2012-12-10 13:43:04,953 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx0SQ2
+2012-12-10 13:43:05,289 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx0oFG
+2012-12-10 13:43:05,582 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxpk3i
+2012-12-10 13:43:05,958 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxU1pY
+2012-12-10 13:43:06,266 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx5etO
+2012-12-10 13:43:06,619 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx5i3x
+2012-12-10 13:43:06,947 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8OU1
+2012-12-10 13:43:07,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx2MBE
+2012-12-10 13:43:07,943 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxz2cT
+2012-12-10 13:43:08,266 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMr5iG
+2012-12-10 13:43:08,846 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMtS2H
+2012-12-10 13:43:09,274 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMEyUb
+2012-12-10 13:43:09,995 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQv8A
+2012-12-10 13:43:10,993 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQjMc
+2012-12-10 13:43:11,343 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHOTw
+2012-12-10 13:43:11,737 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMquoP
+2012-12-10 13:43:12,065 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIw4Ku
+2012-12-10 13:43:12,404 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMZYLo
+2012-12-10 13:43:12,783 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIdXL1
+2012-12-10 13:43:13,162 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFS1L
+2012-12-10 13:43:13,541 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI3X3a
+2012-12-10 13:43:13,895 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI3XrU
+2012-12-10 13:43:14,221 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjICgUn
+2012-12-10 13:43:14,569 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIJpFS
+2012-12-10 13:43:14,879 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfs51n
+2012-12-10 13:43:15,231 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIMKwv
+2012-12-10 13:43:15,788 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhtwp
+2012-12-10 13:43:16,732 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj40LV2
+2012-12-10 13:43:17,075 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIvPFy
+2012-12-10 13:43:17,513 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfscRB
+2012-12-10 13:43:18,160 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFmHQ
+2012-12-10 13:43:18,733 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFKc7
+2012-12-10 13:43:19,083 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfqxEC
+2012-12-10 13:43:19,406 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjflc11
+2012-12-10 13:43:19,720 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfXuPb
+2012-12-10 13:43:20,024 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVRvxp
+2012-12-10 13:43:20,331 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVAOtI
+2012-12-10 13:43:20,632 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtkS8Q
+2012-12-10 13:43:20,934 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf4bDt
+2012-12-10 13:43:21,266 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLDkQ
+2012-12-10 13:43:21,578 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf2eNy
+2012-12-10 13:43:21,937 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf2cOW
+2012-12-10 13:43:22,231 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAvxa
+2012-12-10 13:43:22,541 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAvLH
+2012-12-10 13:43:22,854 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVOZkU
+2012-12-10 13:43:23,171 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVpgah
+2012-12-10 13:43:23,479 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVMHvK
+2012-12-10 13:43:23,786 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVoDt9
+2012-12-10 13:43:24,095 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVJD5o
+2012-12-10 13:43:24,401 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVMHyA
+2012-12-10 13:43:24,747 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjc8HMv
+2012-12-10 13:43:25,054 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjisKkM
+2012-12-10 13:43:25,357 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMUl4H
+2012-12-10 13:43:25,666 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMqLeB
+2012-12-10 13:43:26,036 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7uMh4
+2012-12-10 13:43:26,343 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfbouf
+2012-12-10 13:43:26,648 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjctYYW
+2012-12-10 13:43:26,959 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7uMh4
+2012-12-10 13:43:27,262 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbzVKM
+2012-12-10 13:43:27,570 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5Lem9
+2012-12-10 13:43:27,876 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5LQkb
+2012-12-10 13:43:28,205 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5AduB
+2012-12-10 13:43:28,508 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5wRxt
+2012-12-10 13:43:28,813 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5hsWd
+2012-12-10 13:43:29,127 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5PYcp
+2012-12-10 13:43:29,431 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqr511
+2012-12-10 13:43:29,742 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqrXc9
+2012-12-10 13:43:30,047 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq1cIm
+2012-12-10 13:43:30,359 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjquRS4
+2012-12-10 13:43:30,679 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqurdL
+2012-12-10 13:43:31,007 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqurdL
+2012-12-10 13:43:31,322 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqurdL
+2012-12-10 13:43:31,663 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqnelQ
+2012-12-10 13:43:34,973 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqncAc
+2012-12-10 13:43:35,282 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/hk1BD
+2012-12-10 13:43:35,590 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7uMh4
+2012-12-10 13:43:35,903 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiWvux
+2012-12-10 13:43:36,209 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxuw8I
+2012-12-10 13:43:36,518 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxT8vj
+2012-12-10 13:43:36,833 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxj2j8
+2012-12-10 13:43:37,144 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWJBo
+2012-12-10 13:43:37,450 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxh5Kg
+2012-12-10 13:43:37,763 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIdMql
+2012-12-10 13:43:38,073 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIAz1x
+2012-12-10 13:43:38,389 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIJ39e
+2012-12-10 13:43:38,697 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIUK8C
+2012-12-10 13:43:39,000 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIAz1x
+2012-12-10 13:43:39,303 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfJ27k
+2012-12-10 13:43:39,613 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfVHyh
+2012-12-10 13:43:39,921 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf4Wo9
+2012-12-10 13:43:40,236 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf4tdR
+2012-12-10 13:43:40,549 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtjPv4
+2012-12-10 13:43:40,944 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjP4u6W
+2012-12-10 13:43:41,364 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtukz9
+2012-12-10 13:43:41,753 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtl2q7
+2012-12-10 13:43:42,081 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt0DJU
+2012-12-10 13:43:42,389 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqmoMJ
+2012-12-10 13:43:43,363 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj53Wox
+2012-12-10 13:43:43,673 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5u8pr
+2012-12-10 13:43:43,983 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5nZvo
+2012-12-10 13:43:44,295 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj52hxA
+2012-12-10 13:43:44,612 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqd3Rn
+2012-12-10 13:43:45,028 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqmoMJ
+2012-12-10 13:43:45,364 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqbKGB
+2012-12-10 13:43:45,668 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqwGgI
+2012-12-10 13:43:45,976 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGDjIV
+2012-12-10 13:43:46,408 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGdLFl
+2012-12-10 13:43:46,731 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGrOBv
+2012-12-10 13:43:47,042 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbeXQN
+2012-12-10 13:43:47,347 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbBSqS
+2012-12-10 13:43:47,670 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjb8396
+2012-12-10 13:43:47,961 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjU8pgd
+2012-12-10 13:43:48,249 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUlMhc
+2012-12-10 13:43:48,538 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyfVyd
+2012-12-10 13:43:48,829 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy5ULx
+2012-12-10 13:43:49,137 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyRzyL
+2012-12-10 13:43:49,443 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyHDTh
+2012-12-10 13:43:49,767 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyqzdq
+2012-12-10 13:43:50,057 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyUFHb
+2012-12-10 13:43:50,362 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyZkgV
+2012-12-10 13:43:50,671 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy7vCZ
+2012-12-10 13:43:50,961 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLDSTf
+2012-12-10 13:43:51,258 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlDVHoU
+2012-12-10 13:43:51,554 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZyh98
+2012-12-10 13:43:51,844 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjP4u6W
+2012-12-10 13:43:52,135 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj21eTZ
+2012-12-10 13:43:52,426 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj28NIY
+2012-12-10 13:43:52,779 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2CbKm
+2012-12-10 13:43:53,103 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2Kxmr
+2012-12-10 13:43:53,394 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwQSsI
+2012-12-10 13:43:53,677 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjw0NuZ
+2012-12-10 13:43:53,984 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZnuUO
+2012-12-10 13:43:54,270 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwJr6x
+2012-12-10 13:43:54,601 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZeMrB
+2012-12-10 13:43:54,889 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZ3ADs
+2012-12-10 13:43:55,216 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZ3Hbh
+2012-12-10 13:43:55,519 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZH3vk
+2012-12-10 13:43:55,812 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZTa2m
+2012-12-10 13:43:56,145 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZyh98
+2012-12-10 13:43:56,425 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZLAu5
+2012-12-10 13:43:56,713 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjP4u6W
+2012-12-10 13:43:56,996 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzeh6O
+2012-12-10 13:43:57,314 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzbGRZ
+2012-12-10 13:43:57,605 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzdreO
+2012-12-10 13:43:57,917 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzaBLc
+2012-12-10 13:43:58,273 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzJSvx
+2012-12-10 13:43:58,601 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjzfPWW
+2012-12-10 13:43:58,905 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7W1Qo
+2012-12-10 13:43:59,197 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7Wz4x
+2012-12-10 13:43:59,484 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7NTdE
+2012-12-10 13:43:59,805 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj7aXcM
+2012-12-10 13:44:00,101 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjP4u6W
+2012-12-10 13:44:00,392 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjP4u6W
+2012-12-10 13:44:00,683 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPymzR
+2012-12-10 13:44:01,023 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPLhIm
+2012-12-10 13:44:01,323 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjPPbYH
+2012-12-10 13:44:01,617 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvFhnq
+2012-12-10 13:44:01,942 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvxBqT
+2012-12-10 13:44:02,250 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvVMdf
+2012-12-10 13:44:02,555 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvGtEl
+2012-12-10 13:44:02,851 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjvA5Jl
+2012-12-10 13:44:03,199 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlsSKSN
+2012-12-10 13:44:03,517 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zls5pW7
+2012-12-10 13:44:03,823 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlsc0XP
+2012-12-10 13:44:04,352 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlsGODs
+2012-12-10 13:44:04,715 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlF8zOO
+2012-12-10 13:44:05,266 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlFWozQ
+2012-12-10 13:44:05,669 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlF0cKv
+2012-12-10 13:44:06,028 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlFXBSC
+2012-12-10 13:44:06,318 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlkgodM
+2012-12-10 13:44:06,608 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlkEbQm
+2012-12-10 13:44:06,974 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zldL5M0
+2012-12-10 13:44:07,261 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlDWVQ7
+2012-12-10 13:44:07,548 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlgXRDc
+2012-12-10 13:44:07,861 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zlgM21a
+2012-12-10 13:44:08,235 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6ww4m
+2012-12-10 13:44:08,530 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6PcrA
+2012-12-10 13:44:08,866 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6z4ja
+2012-12-10 13:44:09,302 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6zFA5
+2012-12-10 13:44:10,061 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6zt96
+2012-12-10 13:44:10,436 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6zGhi
+2012-12-10 13:44:11,153 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6zPlL
+2012-12-10 13:44:11,451 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6vk51
+2012-12-10 13:44:11,778 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hN1y
+2012-12-10 13:44:12,115 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hyBI
+2012-12-10 13:44:12,444 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hIPL
+2012-12-10 13:44:12,736 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6hMmu
+2012-12-10 13:44:13,146 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6vmwq
+2012-12-10 13:44:13,465 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFaLh
+2012-12-10 13:44:13,750 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjikJrB
+2012-12-10 13:44:14,239 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjisHfA
+2012-12-10 13:44:14,543 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjis6l3
+2012-12-10 13:44:14,858 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDOUJ
+2012-12-10 13:44:15,159 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiD44V
+2012-12-10 13:44:15,449 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjieD0u
+2012-12-10 13:44:15,738 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji8aA5
+2012-12-10 13:44:16,038 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjijff5
+2012-12-10 13:44:16,367 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjilUI9
+2012-12-10 13:44:16,662 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiW6fN
+2012-12-10 13:44:16,991 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjipMN4
+2012-12-10 13:44:17,285 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiKUKQ
+2012-12-10 13:44:17,577 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiSeMz
+2012-12-10 13:44:17,913 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiadpl
+2012-12-10 13:44:18,219 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiXP2E
+2012-12-10 13:44:18,841 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiiFmY
+2012-12-10 13:44:19,647 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiJDGH
+2012-12-10 13:44:19,965 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjixft5
+2012-12-10 13:44:20,334 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiqG0Z
+2012-12-10 13:44:20,621 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji4aq6
+2012-12-10 13:44:20,908 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiUCk6
+2012-12-10 13:44:21,193 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiU8zD
+2012-12-10 13:44:21,492 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiU9wU
+2012-12-10 13:44:21,799 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiU4nU
+2012-12-10 13:44:22,090 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiyFHp
+2012-12-10 13:44:22,375 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJmzFi
+2012-12-10 13:44:22,662 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJTeUd
+2012-12-10 13:44:22,951 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ6L9M
+2012-12-10 13:44:23,233 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJTa3u
+2012-12-10 13:44:23,516 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJjkby
+2012-12-10 13:44:23,829 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJpS6B
+2012-12-10 13:44:24,634 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJpjl6
+2012-12-10 13:44:24,938 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJO8ua
+2012-12-10 13:44:25,224 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJWsVb
+2012-12-10 13:44:25,522 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJlBvn
+2012-12-10 13:44:25,820 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJWBut
+2012-12-10 13:44:26,125 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJibTV
+2012-12-10 13:44:26,422 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJinIm
+2012-12-10 13:44:26,740 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJiLif
+2012-12-10 13:44:27,080 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ08i2
+2012-12-10 13:44:27,373 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJNCxj
+2012-12-10 13:44:27,773 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJNCnC
+2012-12-10 13:44:28,068 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJKSv5
+2012-12-10 13:44:28,359 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJSq8x
+2012-12-10 13:44:28,642 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJaAb3
+2012-12-10 13:44:28,932 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJaXxJ
+2012-12-10 13:44:29,233 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ6LSb
+2012-12-10 13:44:29,561 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ6n4W
+2012-12-10 13:44:29,864 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJiUCM
+2012-12-10 13:44:30,148 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJJxEg
+2012-12-10 13:44:30,455 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJiSjJ
+2012-12-10 13:44:30,854 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJJwMW
+2012-12-10 13:44:31,159 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJUF7v
+2012-12-10 13:44:31,476 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ2CzQ
+2012-12-10 13:44:31,780 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJLTMP
+2012-12-10 13:44:32,084 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJhhcB
+2012-12-10 13:44:32,393 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxsJS8
+2012-12-10 13:44:32,698 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxkNhu
+2012-12-10 13:44:33,008 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxkqeH
+2012-12-10 13:44:33,338 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxDKzh
+2012-12-10 13:44:33,706 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxDt9v
+2012-12-10 13:44:34,016 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxgTVN
+2012-12-10 13:44:34,299 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxrHh0
+2012-12-10 13:44:34,656 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxmHyU
+2012-12-10 13:44:34,974 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxrlvV
+2012-12-10 13:44:35,376 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxBGS1
+2012-12-10 13:44:35,678 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx1nlq
+2012-12-10 13:44:35,981 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxnNXL
+2012-12-10 13:44:36,272 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx1A1D
+2012-12-10 13:44:36,577 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx31N3
+2012-12-10 13:44:36,924 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxutSM
+2012-12-10 13:44:37,209 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxQEHJ
+2012-12-10 13:44:37,512 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxnYr2
+2012-12-10 13:44:37,819 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxTQDy
+2012-12-10 13:44:38,130 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxTXmw
+2012-12-10 13:44:38,441 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxHQ34
+2012-12-10 13:44:38,739 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYvMr
+2012-12-10 13:44:39,045 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxHtTB
+2012-12-10 13:44:39,383 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxTG9t
+2012-12-10 13:44:39,688 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxOcLe
+2012-12-10 13:44:39,991 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYyhP
+2012-12-10 13:44:40,300 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6Pq7G
+2012-12-10 13:44:40,601 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6740n
+2012-12-10 13:44:40,907 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6PgiQ
+2012-12-10 13:44:41,223 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjisshy
+2012-12-10 13:44:41,537 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjisvH4
+2012-12-10 13:44:41,897 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj6vuLB
+2012-12-10 13:44:42,253 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjis1um
+2012-12-10 13:44:42,560 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjisTGa
+2012-12-10 13:44:42,964 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFseX
+2012-12-10 13:44:43,267 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFgUO
+2012-12-10 13:44:43,573 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFHi3
+2012-12-10 13:44:44,079 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxd6Dq
+2012-12-10 13:44:44,385 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxgyxO
+2012-12-10 13:44:44,686 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxrF2l
+2012-12-10 13:44:45,075 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxRacB
+2012-12-10 13:44:45,366 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxurPk
+2012-12-10 13:44:45,668 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMvk8g
+2012-12-10 13:44:45,988 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx39QJ
+2012-12-10 13:44:46,300 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxu4BJ
+2012-12-10 13:44:46,629 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxENqt
+2012-12-10 13:44:47,308 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxQE1D
+2012-12-10 13:44:47,656 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMvk8g
+2012-12-10 13:44:48,041 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxQBcs
+2012-12-10 13:44:48,348 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYk3q
+2012-12-10 13:44:48,652 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxl0iH
+2012-12-10 13:44:48,949 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxXxFG
+2012-12-10 13:44:49,259 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxlw18
+2012-12-10 13:44:52,579 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxlwjH
+2012-12-10 13:44:52,874 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxlWE5
+2012-12-10 13:44:53,225 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMA8qF
+2012-12-10 13:44:53,518 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxpNOU
+2012-12-10 13:44:53,841 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWbIs
+2012-12-10 13:44:54,128 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx0aZ5
+2012-12-10 13:44:54,416 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxO8uy
+2012-12-10 13:44:54,703 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx7uz3
+2012-12-10 13:44:54,985 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMkleQ
+2012-12-10 13:44:55,272 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMksmG
+2012-12-10 13:44:55,561 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMrQNf
+2012-12-10 13:44:55,856 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMEIK1
+2012-12-10 13:44:56,169 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMuYrC
+2012-12-10 13:44:56,471 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMmeN4
+2012-12-10 13:44:56,761 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMmxae
+2012-12-10 13:44:57,051 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8elA
+2012-12-10 13:44:57,340 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMEGay
+2012-12-10 13:44:57,627 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMRpQB
+2012-12-10 13:44:57,949 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMXv9P
+2012-12-10 13:44:58,254 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMRjdb
+2012-12-10 13:44:58,536 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQ1Dp
+2012-12-10 13:44:58,914 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMvXhb
+2012-12-10 13:44:59,213 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM2Vbl
+2012-12-10 13:44:59,513 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMvk8g
+2012-12-10 13:44:59,800 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMhwAu
+2012-12-10 13:45:00,088 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIkdXx
+2012-12-10 13:45:00,375 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIkp46
+2012-12-10 13:45:00,690 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIDjwa
+2012-12-10 13:45:00,992 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI6EC4
+2012-12-10 13:45:01,281 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIguv3
+2012-12-10 13:45:01,567 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIgLZG
+2012-12-10 13:45:01,881 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIdEG2
+2012-12-10 13:45:02,237 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIBDOT
+2012-12-10 13:45:02,543 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIdAK2
+2012-12-10 13:45:02,863 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIrDCG
+2012-12-10 13:45:03,179 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIMatf
+2012-12-10 13:45:03,461 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjItGPm
+2012-12-10 13:45:03,747 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIwqqI
+2012-12-10 13:45:04,056 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIAJjR
+2012-12-10 13:45:04,374 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIZN06
+2012-12-10 13:45:04,684 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIZTG1
+2012-12-10 13:45:04,973 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIzp7M
+2012-12-10 13:45:05,260 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhaXf
+2012-12-10 13:45:05,577 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI7Pmg
+2012-12-10 13:45:05,865 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIPRjz
+2012-12-10 13:45:06,155 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhxUF
+2012-12-10 13:45:06,498 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIhUxH
+2012-12-10 13:45:06,787 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfs9oc
+2012-12-10 13:45:07,102 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIPbCs
+2012-12-10 13:45:07,388 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFtyZ
+2012-12-10 13:45:07,677 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIvyiI
+2012-12-10 13:45:07,982 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfDAsX
+2012-12-10 13:45:08,270 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFC32
+2012-12-10 13:45:08,576 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjirCHI
+2012-12-10 13:45:08,953 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiss49
+2012-12-10 13:45:09,242 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji1s34
+2012-12-10 13:45:09,529 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiOLWa
+2012-12-10 13:45:09,813 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjitS3d
+2012-12-10 13:45:10,115 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDAs2
+2012-12-10 13:45:10,435 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjidua8
+2012-12-10 13:45:10,737 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjirOTR
+2012-12-10 13:45:11,041 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiBm9y
+2012-12-10 13:45:11,346 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji3PPW
+2012-12-10 13:45:11,654 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjim47k
+2012-12-10 13:45:11,960 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji8GOq
+2012-12-10 13:45:12,275 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji0QCy
+2012-12-10 13:45:12,581 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjitkPg
+2012-12-10 13:45:12,887 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjionZE
+2012-12-10 13:45:13,203 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji6upD
+2012-12-10 13:45:13,507 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjibadN
+2012-12-10 13:45:13,812 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiUDpz
+2012-12-10 13:45:14,143 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji4lRe
+2012-12-10 13:45:14,444 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJQLjo
+2012-12-10 13:45:14,758 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJj7Es
+2012-12-10 13:45:15,085 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJassB
+2012-12-10 13:45:15,443 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJiMAJ
+2012-12-10 13:45:15,747 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJJYP7
+2012-12-10 13:45:16,054 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJMnmF
+2012-12-10 13:45:16,362 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJImJb
+2012-12-10 13:45:16,669 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJVDuT
+2012-12-10 13:45:16,979 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJVX4u
+2012-12-10 13:45:17,286 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJc4nH
+2012-12-10 13:45:17,610 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJtV6y
+2012-12-10 13:45:17,944 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJy7PV
+2012-12-10 13:45:18,251 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJy6YV
+2012-12-10 13:45:18,558 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJLHDL
+2012-12-10 13:45:18,875 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ2PNa
+2012-12-10 13:45:19,180 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxBJwB
+2012-12-10 13:45:19,481 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxDm8l
+2012-12-10 13:45:19,789 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxr9X4
+2012-12-10 13:45:20,109 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxBEuo
+2012-12-10 13:45:20,422 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxmyrL
+2012-12-10 13:45:20,724 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxnqub
+2012-12-10 13:45:21,026 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxHtKl
+2012-12-10 13:45:21,364 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxlWdv
+2012-12-10 13:45:21,680 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxTTpU
+2012-12-10 13:45:21,996 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxY87q
+2012-12-10 13:45:22,304 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxjCQU
+2012-12-10 13:45:22,609 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxYJaa
+2012-12-10 13:45:22,913 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxC59l
+2012-12-10 13:45:23,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxqGA1
+2012-12-10 13:45:23,574 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxomGn
+2012-12-10 13:45:23,887 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxK0k8
+2012-12-10 13:45:24,198 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxCsFw
+2012-12-10 13:45:24,518 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx9lrm
+2012-12-10 13:45:24,820 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxCKai
+2012-12-10 13:45:25,252 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx9rHB
+2012-12-10 13:45:25,591 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx9lrm
+2012-12-10 13:45:25,897 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx9puX
+2012-12-10 13:45:26,202 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxomGn
+2012-12-10 13:45:26,544 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxoYyt
+2012-12-10 13:45:26,869 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxV65W
+2012-12-10 13:45:27,172 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx6NPT
+2012-12-10 13:45:27,536 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxajs4
+2012-12-10 13:45:27,843 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxxRwE
+2012-12-10 13:45:28,171 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx4yOD
+2012-12-10 13:45:28,479 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx2qdH
+2012-12-10 13:45:28,784 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx73rG
+2012-12-10 13:45:29,071 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMBTEC
+2012-12-10 13:45:29,372 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMm7zo
+2012-12-10 13:45:29,693 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM3rKS
+2012-12-10 13:45:29,978 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM3VnD
+2012-12-10 13:45:30,267 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfubgU
+2012-12-10 13:45:30,580 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQBmv
+2012-12-10 13:45:30,948 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM8igq
+2012-12-10 13:45:31,233 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMQtwe
+2012-12-10 13:45:31,554 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMjCTs
+2012-12-10 13:45:31,970 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMpSIv
+2012-12-10 13:45:32,273 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMpJv1
+2012-12-10 13:45:32,573 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMNJb7
+2012-12-10 13:45:32,872 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM0IqD
+2012-12-10 13:45:33,182 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMYNWj
+2012-12-10 13:45:33,479 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMjQa6
+2012-12-10 13:45:33,793 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMlRnR
+2012-12-10 13:45:34,093 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMlOna
+2012-12-10 13:45:34,379 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMlf3v
+2012-12-10 13:45:34,669 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMWxAk
+2012-12-10 13:45:34,995 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM0FG6
+2012-12-10 13:45:35,312 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMp3XG
+2012-12-10 13:45:35,646 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM914i
+2012-12-10 13:45:35,943 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMak6O
+2012-12-10 13:45:36,253 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMxEsS
+2012-12-10 13:45:36,587 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMIXn0
+2012-12-10 13:45:36,872 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM5yvT
+2012-12-10 13:45:37,171 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM51Id
+2012-12-10 13:45:37,471 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMqYJg
+2012-12-10 13:45:37,755 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMyEuB
+2012-12-10 13:45:38,040 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIsUGK
+2012-12-10 13:45:38,395 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjImte1
+2012-12-10 13:45:38,680 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIDstj
+2012-12-10 13:45:38,980 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIkAZ5
+2012-12-10 13:45:39,273 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDnNK
+2012-12-10 13:45:39,555 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJCBCq
+2012-12-10 13:45:39,846 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxsEEN
+2012-12-10 13:45:40,143 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxl50s
+2012-12-10 13:45:40,433 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxWVCH
+2012-12-10 13:45:40,716 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxy6Tk
+2012-12-10 13:45:41,056 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxhOII
+2012-12-10 13:45:41,341 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHgXX
+2012-12-10 13:45:41,633 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMuYvH
+2012-12-10 13:45:41,918 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMEoXh
+2012-12-10 13:45:42,204 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMHQwU
+2012-12-10 13:45:42,490 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMfwGr
+2012-12-10 13:45:42,776 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM5l5c
+2012-12-10 13:45:43,081 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM5hE8
+2012-12-10 13:45:43,776 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIDuPW
+2012-12-10 13:45:44,061 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMzoGo
+2012-12-10 13:45:44,352 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIuH59
+2012-12-10 13:45:44,644 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIuCG1
+2012-12-10 13:45:44,932 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIBM7a
+2012-12-10 13:45:45,222 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkMYN
+2012-12-10 13:45:45,551 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIh2Se
+2012-12-10 13:45:45,837 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfkG0h
+2012-12-10 13:45:46,124 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfXbdk
+2012-12-10 13:45:46,417 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfxtEX
+2012-12-10 13:45:46,705 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf2AJv
+2012-12-10 13:45:46,987 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfLeQ5
+2012-12-10 13:45:47,274 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfAnZg
+2012-12-10 13:45:47,584 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcah17
+2012-12-10 13:45:47,888 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtDj5K
+2012-12-10 13:45:48,173 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt1siZ
+2012-12-10 13:45:48,464 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtlIGJ
+2012-12-10 13:45:48,754 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtCoH8
+2012-12-10 13:45:49,043 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtLVQ6
+2012-12-10 13:45:49,335 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtAgp8
+2012-12-10 13:45:49,622 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtznaP
+2012-12-10 13:45:49,933 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjt7dZL
+2012-12-10 13:45:50,214 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj58AXl
+2012-12-10 13:45:50,498 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5ESOM
+2012-12-10 13:45:50,782 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5T6ct
+2012-12-10 13:45:51,070 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj5L5NX
+2012-12-10 13:45:51,399 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqB6p4
+2012-12-10 13:45:51,700 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqmfei
+2012-12-10 13:45:52,090 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqH21H
+2012-12-10 13:45:52,377 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq9kN4
+2012-12-10 13:45:52,696 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqXme7
+2012-12-10 13:45:53,024 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjq6272
+2012-12-10 13:45:54,175 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqJT3d
+2012-12-10 13:45:54,523 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqt9TM
+2012-12-10 13:45:54,839 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqqmJE
+2012-12-10 13:45:55,285 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqUWYI
+2012-12-10 13:45:55,659 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjqPP6D
+2012-12-10 13:45:56,164 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGEyua
+2012-12-10 13:45:56,784 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjGnAWy
+2012-12-10 13:45:57,093 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbe5Md
+2012-12-10 13:45:57,422 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbTfyV
+2012-12-10 13:45:57,759 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjb8uzK
+2012-12-10 13:45:58,098 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbTERm
+2012-12-10 13:45:58,391 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjbTRU6
+2012-12-10 13:45:59,155 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUjBBb
+2012-12-10 13:45:59,677 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUT0DT
+2012-12-10 13:46:00,050 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjUiXK0
+2012-12-10 13:46:00,393 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjysnqX
+2012-12-10 13:46:00,747 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjynbbM
+2012-12-10 13:46:01,118 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjy8mpm
+2012-12-10 13:46:01,414 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyOeL5
+2012-12-10 13:46:01,716 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyj9AI
+2012-12-10 13:46:02,290 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyb12d
+2012-12-10 13:46:02,601 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjyUzwR
+2012-12-10 13:46:02,938 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLDL9B
+2012-12-10 13:46:03,341 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLdWg8
+2012-12-10 13:46:03,631 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLlWuV
+2012-12-10 13:46:03,922 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjLQDUO
+2012-12-10 13:46:04,936 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL6092
+2012-12-10 13:46:05,495 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL6yp5
+2012-12-10 13:46:05,783 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL6umi
+2012-12-10 13:46:06,073 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2R54M
+2012-12-10 13:46:06,377 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj29dIS
+2012-12-10 13:46:06,691 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjL4mZx
+2012-12-10 13:46:07,033 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2rTMc
+2012-12-10 13:46:07,363 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2ju31
+2012-12-10 13:46:07,668 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2Qrv1
+2012-12-10 13:46:08,016 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2Nqi7
+2012-12-10 13:46:08,402 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2XrjV
+2012-12-10 13:46:08,692 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj2X0GT
+2012-12-10 13:46:09,033 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwXPZj
+2012-12-10 13:46:09,367 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwVxfk
+2012-12-10 13:46:09,708 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjwvL6A
+2012-12-10 13:46:10,310 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZlwP6
+2012-12-10 13:46:10,683 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjZIILO
+2012-12-10 13:46:10,991 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj67xoT
+2012-12-10 13:46:11,328 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiFIzs
+2012-12-10 13:46:11,670 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zj67D8i
+2012-12-10 13:46:12,024 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxg8Lp
+2012-12-10 13:46:15,908 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjikeXk
+2012-12-10 13:46:16,306 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiDEko
+2012-12-10 13:46:16,968 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiYRiI
+2012-12-10 13:46:17,281 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjie0Ra
+2012-12-10 13:46:17,606 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjip2GJ
+2012-12-10 13:46:17,921 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjiV5Wl
+2012-12-10 13:46:18,205 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjibfvT
+2012-12-10 13:46:18,588 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zji48Wq
+2012-12-10 13:46:18,875 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJrZca
+2012-12-10 13:46:19,207 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJB7Ud
+2012-12-10 13:46:19,522 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJJ0s9
+2012-12-10 13:46:19,827 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ6EPb
+2012-12-10 13:46:20,135 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJax0h
+2012-12-10 13:46:20,441 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJMPWR
+2012-12-10 13:46:20,765 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJ2Cmm
+2012-12-10 13:46:21,215 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxk62r
+2012-12-10 13:46:21,540 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjJhv9Q
+2012-12-10 13:46:21,945 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxe5vK
+2012-12-10 13:46:22,274 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxrLT1
+2012-12-10 13:46:22,568 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx3lmz
+2012-12-10 13:46:22,903 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxN08j
+2012-12-10 13:46:23,224 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjx0nCw
+2012-12-10 13:46:23,626 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxIFJ0
+2012-12-10 13:46:23,972 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxNb20
+2012-12-10 13:46:24,320 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxNL1U
+2012-12-10 13:46:24,896 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxIFJ0
+2012-12-10 13:46:25,323 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMRi1s
+2012-12-10 13:46:25,753 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjxLfVu
+2012-12-10 13:46:26,063 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM3uca
+2012-12-10 13:46:26,368 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMRxBb
+2012-12-10 13:46:26,681 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMTtqX
+2012-12-10 13:46:26,986 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMY6qg
+2012-12-10 13:46:27,309 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM1fLb
+2012-12-10 13:46:27,617 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMT6t4
+2012-12-10 13:46:27,928 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjMJMAg
+2012-12-10 13:46:28,239 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjM7FVA
+2012-12-10 13:46:28,592 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjImYsB
+2012-12-10 13:46:28,878 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjImY4F
+2012-12-10 13:46:29,193 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIFgn3
+2012-12-10 13:46:29,618 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIdMeJ
+2012-12-10 13:46:29,959 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjI3bbG
+2012-12-10 13:46:30,269 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIiY6c
+2012-12-10 13:46:30,654 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIx4Bz
+2012-12-10 13:46:31,042 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIt3pZ
+2012-12-10 13:46:31,334 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjIUV8t
+2012-12-10 13:46:31,654 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfFoxy
+2012-12-10 13:46:31,990 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjf8ik2
+2012-12-10 13:46:32,357 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfF4yj
+2012-12-10 13:46:32,661 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfDNZb
+2012-12-10 13:46:32,971 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfYMIX
+2012-12-10 13:46:33,288 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfOWvI
+2012-12-10 13:46:33,593 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjffnG2
+2012-12-10 13:46:33,900 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfVC60
+2012-12-10 13:46:34,212 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfUQh4
+2012-12-10 13:46:34,495 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVBMaD
+2012-12-10 13:46:34,783 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfZJP8
+2012-12-10 13:46:35,073 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjfZwYN
+2012-12-10 13:46:35,365 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVMdPW
+2012-12-10 13:46:35,652 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVI7bR
+2012-12-10 13:46:36,021 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjVI2Qc
+2012-12-10 13:46:36,359 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcNilF
+2012-12-10 13:46:36,707 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjcLQj2
+2012-12-10 13:46:37,028 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjch77N
+2012-12-10 13:46:37,343 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtnvf8
+2012-12-10 13:46:37,699 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtNjEP
+2012-12-10 13:46:37,989 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtWoJ0
+2012-12-10 13:46:38,313 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtCekX
+2012-12-10 13:46:38,606 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtCL2H
+2012-12-10 13:46:38,893 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtbEoQ
+2012-12-10 13:46:39,210 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtLrnl
+2012-12-10 13:46:39,510 vivi.utils.parser.SinaWeiboParser:228 [ INFO]: get http://t.cn/zjtzd9E
+2012-12-10 15:40:19,879 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset UTF-8 by universalchardet
+2012-12-10 15:40:29,807 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 15:40:46,578 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 15:40:48,661 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 15:41:28,556 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 15:42:37,634 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 15:42:42,654 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:02:08,213 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset UTF-8 by universalchardet
+2012-12-10 16:02:18,767 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:02:25,519 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:02:27,538 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:02:38,832 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:02:49,968 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet
+2012-12-10 16:03:01,798 com.wumii.model.service.CharsetDetector:68 [ INFO]: guess charset GB18030 by universalchardet

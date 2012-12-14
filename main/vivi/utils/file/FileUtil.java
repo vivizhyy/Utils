@@ -1,12 +1,15 @@
 package vivi.utils.file;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 
@@ -16,6 +19,24 @@ public class FileUtil {
     
     public static String getContents(String filePath) {
         return getContents(filePath, LINE_TEMINAL);
+    }
+    
+    public static List<String> getLines(String filePath) {
+        List<String> lines = new ArrayList<>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("file " + filePath + " not found!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        return lines;
     }
     
     public static String getContents(String filePath, String lineTerminal) {
@@ -35,15 +56,15 @@ public class FileUtil {
         return sb.toString();
     }
     
-    public static void writeContents(List<String> contents, String filePath) {
+    public static void writeContents(Collection<? extends Object> contents, String filePath) {
         writeContents(contents, filePath, LINE_TEMINAL);
     }
     
-    public static void writeContents(List<String> contents, String filePath, String lineTerminal) {
+    public static void writeContents(Collection<? extends Object> contents, String filePath, String lineTerminal) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
-            for (String line : contents) {
-                writer.append(line).append(lineTerminal);
+            for (Object line : contents) {
+                writer.append(line.toString()).append(lineTerminal);
             }
             writer.flush();
             writer.close();
@@ -60,8 +81,12 @@ public class FileUtil {
     }
     
     public static String getTxtFileNameWithTimestamp(String fileHead) {
-        return fileHead + 
+        return fileHead + " " +
                 new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Timestamp(System.currentTimeMillis())) + 
                 ".txt";
+    }
+    
+    public static String getFileNameWithTimestampLong(String head) {
+        return head + "-" + System.currentTimeMillis();
     }
 }

@@ -13,13 +13,14 @@ public class TestBase62IdObfuscator {
 
     @Test
     public void testEncode() {
-        long longIdToEncode = 2679397;
+        long longIdToEncode = 6910223;
         System.out.println(Base62IdObfuscator.encode(longIdToEncode));
     }
 
     @Test
     public void testDecode() {
-        System.out.println(Base62IdObfuscator.decode("cJrDn88A"));
+        long decodedLong = Base62IdObfuscator.decode("z95O3FpFz");
+        System.out.println(decodedLong);
     }
 
 }
